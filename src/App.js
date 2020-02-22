@@ -28,7 +28,10 @@ class App extends Component {
                         data-amount="10000"
                         onClick={this.withDrawMoney}
                     >WITHDRAW $10,000</button>
-                    <button data-amount="5000">WITHDRAW $5,000</button>
+                    <button
+                        data-amount="5000"
+                        onClick={this.withDrawMoney}
+                    >WITHDRAW $5,000</button>
                 </section>
 
                 <p className="App__giveaway">Give away all your cash to charity</p>
