@@ -2,7 +2,7 @@ import React from "react";
 import formatNumber from "format-number";
 import photographer from "./images/girl.png";
 import { setMoney } from './actions/index';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import "./App.css";
 import store from './store/index';
 
@@ -12,7 +12,9 @@ function App(props) {
         store.dispatch(setMoney(amount));
     }
 
-    const { username, totalAmount } = props;
+    const username = useSelector(state => state.username);
+    const totalAmount = useSelector(state => state.totalAmount);
+    //const { username, totalAmount } = props;
     return (
         <div className="App">
             <img className="App__userpic" src={photographer} alt="user" />
